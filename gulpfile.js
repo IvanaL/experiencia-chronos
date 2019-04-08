@@ -5,8 +5,8 @@ const
   sass = require('gulp-sass'),
   minify = require('gulp-minify'),
   imagemin = require('gulp-imagemin'),
-  browserSync = require('browser-sync').create(),
-  php = require('gulp-connect-php');
+  browserSync = require('browser-sync').create();
+  //php = require('gulp-connect-php');
 
 
 // Paths
@@ -84,12 +84,12 @@ gulp.task('copy', function(){
 });
 
 // Php runner
-gulp.task('php', function(){
+/*gulp.task('php', function(){
     php.server({base:'./src/*.*', port:8010, keepalive:true});
-});
+});*/
 
 // Server & Watchers
-gulp.task('serve', gulp.series('sass', 'copy', 'js', 'images', 'fonts', ['php'], function(){
+gulp.task('serve', gulp.series('sass', 'copy', 'js', 'images', 'fonts', function(){
 
   browserSync.init({
     server : path.files.distPath

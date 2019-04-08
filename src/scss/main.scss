@@ -1,6 +1,7 @@
 @import 'variables.scss';
 @import 'fonts.scss';
 @import 'header.scss';
+@import 'table.scss';
 
 /* Helpers & Resets */
 *,
@@ -15,6 +16,10 @@
   font-size: 16px;
 }
 
+html,body{
+  height: 100%;
+}
+
 img {
 
   &.responsive {
@@ -27,7 +32,7 @@ img {
 .hide-md {
   display: block;
 
-  @media screen and (min-width: $bp-md) {
+  @media screen and (min-width: $md) {
     display: none !important;
   }
 }
@@ -36,7 +41,7 @@ img {
 .hide-bb {
   display: block;
 
-  @media screen and (min-width: $bp-l) {
+  @media screen and (min-width: $xl) {
     display: none;
   }
 }
@@ -44,38 +49,89 @@ img {
 .hide-mob {
   display: none;
 
-  @media screen and (min-width: $bp-l) {
+  @media screen and (min-width: $xl) {
     display: block;
   }
 }
 
 html,
 body {
-  background: $black;
-  color: $white;
   font-family: 'naturasans', sans-serif;
+  font-size: 16px;
   font-weight: 400;
   background-size: cover;
 }
 
-.content-wrapper {
-  margin: 0 auto;
-  width: 90%;
+.wrapper{
+  width: 100%;
+  min-height: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  @media(min-width: $sm){
+    max-width: 720px;
+  }
+  @media(min-width: $md){
+    max-width: 960px;
+  }
+  @media(min-width: $xl){
+    max-width: 1140px;
+  }
+  @media(min-width: $xxl){
+    max-width: 1340px;
+  }
 }
 
-.row {
-  display: flex;
-  flex-direction: column;
-
-  @media screen and (min-width: $bp-md) {
-    flex-direction: row;
+h1{
+  font-size: 1.25rem;
+  &:after{
+    content: '';
+    height: 2px;
+    max-width: 100px;
+    background-color: #000;
+    display: block;
+    margin-top: 0.625rem;
   }
+}
 
-  .col-1-2 {
-    width: 100%;
+.flex{
+  display: -ms-flexbox;
+  display: -webkit-flexbox;
+  display: -moz-flexbox;
+  display: flex;
+}
 
-    @media screen and (min-width: $bp-md) {
-      width: 50%;
+.lead{
+  padding: 0 0 1.875rem 0;
+  display: flex;
+  justify-content: space-between;
+  div{
+    &:first-child{
+      flex: 2;
+    }
+    &:last-child{
+      flex: 1;
+      align-self: center;
+      text-align: right;
     }
   }
+}
+
+.button{
+  background-color: #ddd;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.625rem 0.9375rem;
+  border-radius: 5px;
+  display: inline-block;
+  &:hover,&:active{
+    outline: none;
+  }
+}
+
+#footer{
+  padding: 1.875rem 0;
+  text-align: right;
 }

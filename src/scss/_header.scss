@@ -1,110 +1,46 @@
-.header {
+#header {
   display: flex;
   align-items: center;
-
-
-
-  .logo {
-    display: inline-block;
-    padding: 1.25rem 0;
-    width: 6.625rem;
-
-    img {
-      align-self: center;
-      &:first-child {
-        margin-right: 1.25rem;
-      }
-    }
-
-    @media screen and (min-width: $bp-l) {
-      display: flex;
-      width: 21.13rem;
+  justify-content: flex-end;
+  padding: 1.875rem 0;
+  >div{
+    &:first-child{
+      margin-right: 1.25rem;
     }
   }
 
-  .hamburger{
+  #hamburger{
     margin-right: 0.9375rem;
     .fa-bars{
       font-size: 1.5rem;
     }
   }
 
-  .nav-sub-item{
-    position: absolute;
-    width: 100%;
-    background-color: #ffffff;
-    display: none;
-
-    @media screen and (min-width: $bp-md){
-      bottom: -60px;
-    }
-    a{
-      color: #000000;
-      font-size: 0.875rem;
-      padding: 0.9375rem;
-      width: 100%;
-      display: inline-block;
-    }
-  }
-
-  .open{
-    display: block;
-  }
-
-  .nav-items {
-    margin-left: auto;
-    align-items: center;
-
-    position: absolute;
-    top: 14%;
-    width: 90%;
-
-    @media screen and (min-width: $bp-sm){
-      top: 20%;
-    }
-
-    @media screen and (min-width: $bp-md){
-      position: relative;
-      top: auto;
-      width: auto;
-    }
-
-    @media screen and (min-width: $bp-l){
-      display: flex;
-    }
-
-    .fa-caret-down {
-      margin-left: 0.625rem;
-    }
-
-    .roles {
-      align-items: center;
-      width: 100%;
+  .hamburger-content{
+    position: relative;
+    .nav-sub-item{
+      display: none;
+      position: absolute;
+      width: 200px;
+      list-style: none;
       background-color: #ffffff;
-
-      @media screen and (min-width: $bp-md){
-        display: flex;
-        margin-left: 2.375rem;
-        background-color: transparent;
-        padding: 0;
-      } 
-      a{
-        color: #000000;
-        font-size: 0.875rem;
-        display: flex;
-        padding: 0.9375rem;
-        width: 100%;
-        @media screen and (min-width: $bp-md){
-          padding: 0;
-          color: #ffffff;
-          font-size: 1rem;
+      right: 0;
+      top: 2rem;
+      border: 1px solid #ccc;
+      li{
+        padding: 0.625rem;
+        &:not(:last-child){
+          border-bottom: 1px solid #ccc;
         }
-        @media screen and (min-width: $bp-xxl){
-          font-size: 1.5rem;
-        } 
       }
-
     }
   }
 
+}
+
+.head{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 0 1.875rem 0;
 }

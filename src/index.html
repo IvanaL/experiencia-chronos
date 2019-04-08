@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Natura - Experiencia Chronos</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.2/css/responsive.dataTables.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <div class="wrapper">
+
+    <header id="header">
+      <div><a href="#">back</a></div>
+      <div><a href="#" id="hamburger">hamb</a></div>
+    </header>
+
+    <div class="head">
+      <div class="logo">
+        IMAGEN
+      </div>
+    </div>
+
+    <div class="lead">
+      <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultrices nisl id dignissim efficitur. Aenean fermentum felis tellus, quis consectetur nisl mollis nec. Integer ullamcorper sollicitudin ligula, a feugiat justo bibendum nec.</div>
+      <div><a href="#" class="button">Cargar nuevo test</a></div>
+    </div>
+
+    <table id="tableTest" class="display custom-table" style="width:100%">
+      <thead>
+          <tr>
+              <th><span>Código CN</span></th>
+              <th><span>Nombre CN</span></th>
+              <th><span>Medición #1</span></th>
+              <th><span>Medición #2</span></th>
+              <th><span>Medición #3</span></th>
+              <th></th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>Tiger Nixon</td>
+              <td>System Architect</td>
+              <td class="green">20/01/2019 <span>36%</span></td>
+              <td class="green">20/01/2019 <span>36%</span></td>
+              <td>2011/04/25</td>
+              <td>$320,800</td>
+          </tr>
+          <tr>
+              <td>Tiger Nixon</td>
+              <td>System Architect</td>
+              <td class="blue">20/01/2019 <span>36%</span></td>
+              <td class="pink">20/01/2019 <span>36%</span></td>
+              <td>2011/04/25</td>
+              <td>$320,800</td>
+          </tr>
+          <tr>
+              <td>Tiger Nixon</td>
+              <td>System Architect</td>
+              <td class="pink">20/01/2019 <span>36%</span></td>
+              <td class="green">20/01/2019 <span>36%</span></td>
+              <td>2011/04/25</td>
+              <td>$320,800</td>
+          </tr>
+      </tbody>
+    </table>
+
+    <footer id="footer">
+      logo
+    </footer>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" src="//cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.js"></script>
+  <script type="text/javascript">
+    $(document).ready( function () {
+        $('#tableTest').DataTable({
+          responsive: true,
+          "searching": false,
+          "lengthChange": false,
+          "bInfo" : false,
+          "ordering": false
+        });
+    } );
+  </script>
+</body>
+</html>
