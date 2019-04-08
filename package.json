@@ -1,0 +1,28 @@
+{
+  "name": "natura-experiencia-chronos",
+  "version": "1.0.0",
+  "description": "Experiencia Chronos Natura",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IvanaL/experiencia-chronos.git"
+  },
+  "author": "Ivana Leikin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IvanaL/experiencia-chronos/issues"
+  },
+  "homepage": "https://github.com/IvanaL/experiencia-chronos#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-connect-php": "^1.0.3",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-minify": "^3.1.0",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.11.0"
+  }
+}

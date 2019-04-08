@@ -1,0 +1,81 @@
+@import 'variables.scss';
+@import 'fonts.scss';
+@import 'header.scss';
+
+/* Helpers & Resets */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 16px;
+}
+
+img {
+
+  &.responsive {
+    display: block;
+    width: 100%;
+  }
+}
+
+
+.hide-md {
+  display: block;
+
+  @media screen and (min-width: $bp-md) {
+    display: none !important;
+  }
+}
+
+
+.hide-bb {
+  display: block;
+
+  @media screen and (min-width: $bp-l) {
+    display: none;
+  }
+}
+
+.hide-mob {
+  display: none;
+
+  @media screen and (min-width: $bp-l) {
+    display: block;
+  }
+}
+
+html,
+body {
+  background: $black;
+  color: $white;
+  font-family: 'naturasans', sans-serif;
+  font-weight: 400;
+  background-size: cover;
+}
+
+.content-wrapper {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: $bp-md) {
+    flex-direction: row;
+  }
+
+  .col-1-2 {
+    width: 100%;
+
+    @media screen and (min-width: $bp-md) {
+      width: 50%;
+    }
+  }
+}
